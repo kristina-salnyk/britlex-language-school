@@ -1,0 +1,26 @@
+.pages {
+  display: flex;
+  font-weight: 500;
+
+  @include setForMobile {
+    display: none;
+  }
+}
+
+.pages__item {
+  &:not(:first-child) {
+    margin-left: 50px;
+  }
+}
+
+.pages__link {
+  display: block;
+
+  @include setYPadding(55px);
+
+  color: map-get($text-colors, 'secondary');
+}
+
+.nav__pages {
+  margin-left: 228px;
+}

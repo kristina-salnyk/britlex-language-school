@@ -1,0 +1,41 @@
+.about-us__item:not(:first-child) {
+  margin-top: 30px;
+}
+
+.about-us__img {
+  &--business-competition-bro {
+    width: 100%;
+    max-width: calc(767px - (24px * 2));
+
+    @include setForDesktop {
+      width: 540px;
+      height: 540px;
+    }
+  }
+}
+
+.about-us__content {
+  margin-top: 23px;
+
+  font-size: 13px;
+  line-height: 1.54;
+  text-align: center;
+}
+
+.about-us__list {
+  margin-top: 24px;
+}
+
+.about-us__title {
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+
+  color: getTextColor('number');
+}
+
+.about-us__descr {
+  font-size: 15px;
+  line-height: 1.47;
+  text-align: center;
+}

@@ -1,0 +1,50 @@
+.skills__item {
+  padding: 16px 13px 45px;
+
+  background: $card-bgr-color;
+  border-radius: 5px;
+}
+
+.skills__item:not(:first-child) {
+  margin-top: 21px;
+}
+
+.skills__img {
+  @extend %x-margin-centered;
+
+  display: block;
+
+  &--shared-goals-bro {
+    width: 100%;
+    max-width: 213px;
+  }
+
+  &--typewriter-bro {
+    width: 100%;
+    max-width: 204px;
+  }
+
+  &--house-bookshelves-bro {
+    width: 100%;
+    max-width: 236px;
+  }
+
+  &--podcast-audience-bro {
+    width: 100%;
+    max-width: 232px;
+  }
+}
+
+.skills__title {
+  margin-top: 28px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 4.44;
+}
+
+.skills__descr {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.54;
+}

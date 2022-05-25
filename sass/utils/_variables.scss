@@ -1,0 +1,30 @@
+$transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+$primary-font: 'Poppins', sans-serif;
+
+$primary-bgr-color: #fff;
+$card-bgr-color: #f5f5f5;
+$label-bgr-color: #eee;
+
+$text-colors: (
+  'primary': #8f95a5,
+  'secondary': #263238,
+  'number': #2a3246,
+  'label': #546269,
+  'white': #fff,
+  'black': #000,
+);
+
+$border-colors: (
+  'footer': #c4c4c4,
+  'btn': #263238,
+  'input': #8f95a5,
+);
+
+@function getBorderColor($key) {
+  @return map-get($border-colors, $key);
+}
+
+@function getTextColor($key) {
+  @return map-get($text-colors, $key);
+}

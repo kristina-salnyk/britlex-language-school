@@ -1,0 +1,15 @@
+.logo {
+  display: inline-block;
+
+  font-size: 24px;
+
+  color: getTextColor('black');
+
+  @include setForDesktop {
+    font-size: 36px;
+  }
+}
+
+.logo__text {
+  color: getTextColor('primary');
+}

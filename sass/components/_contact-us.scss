@@ -1,0 +1,30 @@
+.contact-us__img {
+  width: 100%;
+  max-width: calc(767px - (24px * 2));
+
+  @include setForDesktop {
+    width: 425px;
+    height: 430px;
+  }
+}
+
+.contact-us__descr {
+  margin-top: 38px;
+
+  font-size: 14px;
+  text-align: center;
+}
+
+.contact-us__subscribe {
+  margin-top: 31px;
+}
+
+.contact-us__input {
+  padding: 16px 26px;
+  font-size: 12px;
+
+  width: 100%;
+
+  border: 1px solid getBorderColor('input');
+  border-radius: 5px;
+}

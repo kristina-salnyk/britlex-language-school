@@ -1,0 +1,22 @@
+.container {
+  @include setXPadding(15px);
+  @extend %x-margin-centered;
+
+  max-width: 767px;
+
+  @include setForTablet {
+    @include setXPadding(24px);
+  }
+
+  @include setForDesktop {
+    @include setXPadding(20px);
+  }
+
+  @include setForTabletAndDesktop {
+    max-width: 1600px;
+  }
+}
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+}

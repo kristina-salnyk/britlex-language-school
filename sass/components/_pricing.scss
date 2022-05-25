@@ -1,0 +1,54 @@
+.pricing__item {
+  text-align: center;
+
+  &:not(:first-child) {
+    margin-top: 63px;
+  }
+}
+
+.pricing__img {
+  &--online {
+    width: 100%;
+    max-width: 248px;
+
+    @include setForDesktop {
+      width: 426px;
+      height: 320px;
+    }
+  }
+
+  &--lesson {
+    width: 100%;
+    max-width: 257px;
+
+    @include setForDesktop {
+      width: 426px;
+      height: 320px;
+    }
+  }
+
+  &--webinar {
+    width: 100%;
+    max-width: 241px;
+
+    @include setForDesktop {
+      width: 426px;
+      height: 320px;
+    }
+  }
+}
+
+.pricing__title {
+  margin-top: 12px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.56;
+}
+
+.pricing__descr {
+  margin-top: 17px;
+
+  font-size: 13px;
+  line-height: 1.54;
+}

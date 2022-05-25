@@ -1,0 +1,47 @@
+body {
+  font-family: $primary-font;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+
+  color: getTextColor('primary');
+  background-color: $primary-bgr-color;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+address {
+  font-style: inherit;
+}
+
+h2 {
+  color: getTextColor('black');
+}
+
+h3 {
+  color: getTextColor('secondary');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

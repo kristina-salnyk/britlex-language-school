@@ -1,0 +1,9 @@
+@mixin setYPadding($value) {
+  padding-top: $value;
+  padding-bottom: $value;
+}
+
+@mixin setXPadding($value) {
+  padding-left: $value;
+  padding-right: $value;
+}

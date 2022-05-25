@@ -1,0 +1,21 @@
+@import './utils/variables';
+@import './utils/breakpoints';
+@import './utils/modern-normalize';
+@import './utils/style-reset';
+@import './utils/visually-hidden';
+@import './utils/mixins';
+@import './utils/placeholders';
+
+@import './components/page-header';
+@import './components/container';
+@import './components/logo';
+@import './components/nav';
+@import './components/pages';
+@import './components/btn';
+@import './components/hero';
+@import './components/section';
+@import './components/skills';
+@import './components/about-us';
+@import './components/pricing';
+@import './components/contact-us';
+@import './components/page-footer';

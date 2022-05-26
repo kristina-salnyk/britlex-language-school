@@ -6,7 +6,9 @@
   };
 
   menuRefs.menuBtn.addEventListener('click', toggleMenu);
-  menuRefs.menuLink.addEventListener('click', toggleMenu);
+  menuRefs.menuLink.forEach(element => {
+    element.addEventListener('click', toggleMenu);
+  });
 
   function toggleMenu() {
     const expanded = menuRefs.menuBtn.getAttribute('aria-expanded') === 'true' || false;

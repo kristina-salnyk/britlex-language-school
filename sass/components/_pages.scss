@@ -1,26 +1,13 @@
 .pages {
-  display: flex;
+  padding-top: 48px;
+
   font-weight: 500;
+  font-size: 22px;
+  line-height: 2.95;
 
-  @include setForMobile {
-    display: none;
-  }
-}
-
-.pages__item {
-  &:not(:first-child) {
-    margin-left: 50px;
-  }
+  color: getTextColor('secondary');
 }
 
 .pages__link {
-  display: block;
-
-  @include setYPadding(55px);
-
-  color: map-get($text-colors, 'secondary');
-}
-
-.nav__pages {
-  margin-left: 228px;
+  color: getTextColor('secondary');
 }

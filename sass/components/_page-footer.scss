@@ -1,12 +1,13 @@
 .page-footer {
   @extend %x-margin-centered;
-  padding-top: 26px;
-  padding-bottom: 48px;
 
   text-align: center;
 }
 
 .page-footer__wrap {
+  padding-top: 26px;
+  padding-bottom: 48px;
+
   border-top: 1px solid getBorderColor('footer');
 }
 

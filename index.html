@@ -9,33 +9,49 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
     <header class="page-header">
       <div class="container page-header__container">
-        <a class="logo" href="./index.html">Brit<span class="logo__text">lex</span></a>
-
         <nav class="nav">
-          <svg class="nav__icon" width="33" height="19">
-            <use href="./images/icons.svg#burger-menu"></use>
-          </svg>
+          <a class="logo" href="./index.html">Brit<span class="logo__text">lex</span></a>
 
-          <ul class="pages nav__pages">
-            <li class="pages__item"><a class="pages__link" href="./index.html">Home</a></li>
-            <li class="pages__item"><a class="pages__link" href="#">Skills</a></li>
-            <li class="pages__item"><a class="pages__link" href="#">About Us</a></li>
-            <li class="pages__item"><a class="pages__link" href="#">Pricing</a></li>
-            <li class="pages__item"><a class="pages__link" href="#">Contacts</a></li>
-          </ul>
+          <button
+            class="nav__menu-btn"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-menu-button
+          >
+            <svg class="nav__menu-icon" aria-label="Open mobile menu">
+              <use class="nav__icon nav__icon--open" href="./images/icons.svg#burger-menu"></use>
+              <use class="nav__icon nav__icon--close" href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
+
+          <div class="nav__menu-container" data-menu>
+            <div class="nav__menu-wrap">
+              <ul class="pages nav__pages">
+                <li class="pages__item"><a class="pages__link" href="#" data-menu-link>Home</a></li>
+                <li class="pages__item">
+                  <a class="pages__link" href="#skills" data-menu-link>Skills</a>
+                </li>
+                <li class="pages__item">
+                  <a class="pages__link" href="#about-us" data-menu-link>About Us</a>
+                </li>
+                <li class="pages__item">
+                  <a class="pages__link" href="#pricing" data-menu-link>Pricing</a>
+                </li>
+                <li class="pages__item">
+                  <a class="pages__link" href="#contact-us" data-menu-link>Contacts</a>
+                </li>
+              </ul>
+
+              <button class="btn btn--white page-header__btn" type="button">Let’s Talk</button>
+            </div>
+          </div>
         </nav>
-
-        <button class="btn btn--white page-header__btn" type="button">Let’s Talk</button>
       </div>
     </header>
 
@@ -57,7 +73,7 @@
         </div>
       </section>
 
-      <section class="section skills">
+      <section id="skills" class="section skills">
         <div class="container skills__container">
           <h2 class="section__title">Skills</h2>
           <ul class="skills__list">
@@ -111,7 +127,7 @@
         </div>
       </section>
 
-      <section class="section about-us">
+      <section id="about-us" class="section about-us">
         <div class="container about-us__container">
           <h2 class="section__title">About Us</h2>
           <svg class="about-us__img about-us__img--business-competition-bro" viewBox="0 0 540 540">
@@ -140,7 +156,7 @@
         </div>
       </section>
 
-      <section class="section pricing">
+      <section id="pricing" class="section pricing">
         <div class="container">
           <h2 class="section__title">Pricing</h2>
           <ul class="pricing__list">
@@ -185,7 +201,7 @@
         </div>
       </section>
 
-      <section class="section contact-us">
+      <section id="contact-us" class="section contact-us">
         <div class="container">
           <h2 class="section__title">Contact Us</h2>
           <svg class="contact-us__img" viewBox="0 0 425 430">
@@ -195,7 +211,7 @@
             Discover your current English level by taking our free online English test. Sign up to
             our newsletter for learning tips and free resources
           </p>
-          <form class="contact-us__subscribe">
+          <form class="contact-us__subscribe" name="contact-us" autocomplete="on" novalidate>
             <input class="contact-us__input" type="email" placeholder="Enter Your E-mail" />
             <button class="btn btn--black contact-us__btn" type="submit">Subscribe</button>
           </form>
@@ -221,5 +237,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

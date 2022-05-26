@@ -1,5 +1,8 @@
 .btn {
+  width: 100%;
+
   border: none;
+  border-radius: 5px;
 }
 
 .btn--black {
@@ -7,43 +10,36 @@
 
   color: getTextColor('white');
   background: getBorderColor('btn');
-  border-radius: 5px;
 }
 
 .btn--white {
-  @include setYPadding(20px);
-
-  min-width: 312px;
-
   font-weight: 400;
 
-  color: getTextColor('black');
   border: 2px solid getBorderColor('btn');
-  border-radius: 10px;
+  color: getTextColor('black');
+  background-color: inherit;
 }
 
 .page-header__btn {
-  @include setForMobile {
-    display: none;
-  }
+  @include setYPadding(17px);
+  margin-top: 69px;
 }
 
 .hero__btn {
   @include setYPadding(18px);
   margin-top: 33px;
 
+  font-weight: 500;
   font-size: 16px;
-
-  width: 100%;
 }
 
 .skills__btn {
   @include setYPadding(14px);
   margin-top: 38px;
 
+  font-weight: 500;
   font-size: 14px;
 
-  width: 100%;
   max-width: 178px;
 }
 
@@ -51,20 +47,19 @@
   @include setYPadding(20px);
   margin-top: 17px;
 
+  font-weight: 500;
   font-size: 14px;
-
-  width: 100%;
 }
 
 .pricing__btn {
-  @extend %x-margin-centered;
   @include setYPadding(14px);
+  @extend %x-margin-centered;
   margin-top: 33px;
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  width: 100%;
   max-width: 178px;
 
   font-size: 18px;
@@ -72,7 +67,6 @@
   color: getTextColor('secondary');
 
   background: $label-bgr-color;
-  border-radius: 5px;
 }
 
 .btn__text {

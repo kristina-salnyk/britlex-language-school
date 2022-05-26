@@ -1,6 +1,73 @@
 .nav {
-  @include setForTabletAndDesktop {
-    display: flex;
-    align-items: center;
+  padding-top: 36px;
+  padding-bottom: 29px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__menu-btn {
+  padding: 0px;
+
+  display: flex;
+  align-items: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: none;
+  background-color: transparent;
+}
+
+.nav__menu-icon {
+  width: 33px;
+  height: 19px;
+
+  .nav__menu-btn.is-open & {
+    width: 34px;
+    height: 34px;
   }
+}
+
+.nav__icon {
+  &--close {
+    display: none;
+
+    .nav__menu-btn.is-open & {
+      display: block;
+    }
+  }
+
+  &--open {
+    display: block;
+
+    .nav__menu-btn.is-open & {
+      display: none;
+    }
+  }
+}
+
+.nav__menu-container {
+  display: none;
+
+  @include setXPadding(15px);
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: $primary-bgr-color;
+
+  overflow-y: scroll;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.nav__menu-wrap {
+  border-top: 1px solid getBorderColor('footer');
 }

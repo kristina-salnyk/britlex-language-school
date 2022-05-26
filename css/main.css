@@ -269,6 +269,14 @@ body {
   color: #8f95a5;
   background-color: #fff;
 }
+@media (max-width: 767px) {
+  body.modal-is-open {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+}
 
 ul {
   list-style-type: none;
@@ -302,7 +310,8 @@ p {
   padding: 0;
 }
 
-img {
+img,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
@@ -328,8 +337,7 @@ img {
 }
 
 .page-header {
-  padding-top: 36px;
-  padding-bottom: 29px;
+  position: relative;
 }
 
 .container {
@@ -355,15 +363,6 @@ img {
   }
 }
 
-.page-header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .logo {
   display: inline-block;
   font-size: 24px;
@@ -379,85 +378,124 @@ img {
   color: #8f95a5;
 }
 
-@media screen and (min-width: 768px) {
-  .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.pages {
+.nav {
+  padding-top: 36px;
+  padding-bottom: 29px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-weight: 500;
-}
-@media (max-width: 767px) {
-  .pages {
-    display: none;
-  }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.pages__item:not(:first-child) {
-  margin-left: 50px;
+.nav__menu-btn {
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 34px;
+  height: 34px;
+  border: none;
+  background-color: transparent;
 }
 
-.pages__link {
+.nav__menu-icon {
+  width: 33px;
+  height: 19px;
+}
+.nav__menu-btn.is-open .nav__menu-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.nav__icon--close {
+  display: none;
+}
+.nav__menu-btn.is-open .nav__icon--close {
   display: block;
-  padding-top: 55px;
-  padding-bottom: 55px;
+}
+.nav__icon--open {
+  display: block;
+}
+.nav__menu-btn.is-open .nav__icon--open {
+  display: none;
+}
+
+.nav__menu-container {
+  display: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+.nav__menu-container.is-open {
+  display: block;
+}
+
+.nav__menu-wrap {
+  border-top: 1px solid #c4c4c4;
+}
+
+.pages {
+  padding-top: 48px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 2.95;
   color: #263238;
 }
 
-.nav__pages {
-  margin-left: 228px;
+.pages__link {
+  color: #263238;
 }
 
 .btn {
+  width: 100%;
   border: none;
+  border-radius: 5px;
 }
 
 .btn--black {
   font-weight: 500;
   color: #fff;
   background: #263238;
-  border-radius: 5px;
 }
 
 .btn--white {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  min-width: 312px;
   font-weight: 400;
-  color: #000;
   border: 2px solid #263238;
-  border-radius: 10px;
+  color: #000;
+  background-color: inherit;
 }
 
-@media (max-width: 767px) {
-  .page-header__btn {
-    display: none;
-  }
+.page-header__btn {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  margin-top: 69px;
 }
 
 .hero__btn {
   padding-top: 18px;
   padding-bottom: 18px;
   margin-top: 33px;
+  font-weight: 500;
   font-size: 16px;
-  width: 100%;
 }
 
 .skills__btn {
   padding-top: 14px;
   padding-bottom: 14px;
   margin-top: 38px;
+  font-weight: 500;
   font-size: 14px;
-  width: 100%;
   max-width: 178px;
 }
 
@@ -465,8 +503,8 @@ img {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 17px;
+  font-weight: 500;
   font-size: 14px;
-  width: 100%;
 }
 
 .pricing__btn {
@@ -479,12 +517,13 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 178px;
   font-size: 18px;
   color: #263238;
   background: #eee;
-  border-radius: 5px;
 }
 
 .btn__text--pricing {
@@ -698,12 +737,12 @@ img {
 }
 
 .page-footer {
-  padding-top: 26px;
-  padding-bottom: 48px;
   text-align: center;
 }
 
 .page-footer__wrap {
+  padding-top: 26px;
+  padding-bottom: 48px;
   border-top: 1px solid #c4c4c4;
 }
 

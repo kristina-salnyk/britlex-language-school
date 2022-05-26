@@ -6,6 +6,17 @@ body {
 
   color: getTextColor('primary');
   background-color: $primary-bgr-color;
+
+  &.modal-is-open {
+    @include setForMobile {
+      position: relative;
+
+      height: 100%;
+      width: 100%;
+
+      overflow: hidden;
+    }
+  }
 }
 
 ul {
@@ -40,7 +51,8 @@ p {
   padding: 0;
 }
 
-img {
+img,
+svg {
   display: block;
   max-width: 100%;
   height: auto;

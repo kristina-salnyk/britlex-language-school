@@ -20,17 +20,41 @@
   background-color: inherit;
 }
 
-.page-header__btn {
-  @include setYPadding(17px);
+.nav__btn {
+  @include setYPadding(18px);
+
   margin-top: 69px;
+
+  @include setForMobileExtendedUp {
+    margin-top: 80px;
+
+    font-size: 22px;
+
+    max-width: 330px;
+  }
+
+  @include setForTabletUp {
+    margin-top: 62px;
+
+    font-size: 18px;
+
+    max-width: 210px;
+  }
 }
 
 .hero__btn {
   @include setYPadding(18px);
-  margin-top: 33px;
+  margin-top: 32px;
 
   font-weight: 500;
   font-size: 16px;
+
+  @include setForTabletUp {
+    width: 236px;
+
+    font-weight: 400;
+    font-size: 18px;
+  }
 }
 
 .skills__btn {

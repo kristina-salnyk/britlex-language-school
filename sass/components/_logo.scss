@@ -5,7 +5,11 @@
 
   color: getTextColor('black');
 
-  @include setForDesktop {
+  @include setForMobileExtendedUp {
+    font-size: 30px;
+  }
+
+  @include setForDesktopUp {
     font-size: 36px;
   }
 }

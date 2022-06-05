@@ -7,7 +7,7 @@
     width: 100%;
     max-width: calc(767px - (24px * 2));
 
-    @include setForDesktop {
+    @include setForDesktopUp {
       width: 540px;
       height: 540px;
     }

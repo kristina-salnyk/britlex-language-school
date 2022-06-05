@@ -1,11 +1,14 @@
 .pages {
-  padding-top: 48px;
-
   font-weight: 500;
   font-size: 22px;
   line-height: 2.95;
 
   color: getTextColor('secondary');
+
+  @include setForMobileExtendedOnly {
+    font-size: 24px;
+    line-height: 2.71;
+  }
 }
 
 .pages__link {

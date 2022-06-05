@@ -2,17 +2,48 @@
   @include setXPadding(15px);
   @extend %x-margin-centered;
 
-  max-width: 767px;
-
-  @include setForTablet {
-    @include setXPadding(24px);
+  @include setForMobileOnly {
+    max-width: 767px;
   }
 
-  @include setForDesktop {
+  @include setForMobileExtendedUp {
+    @include setXPadding(33px);
+  }
+
+  @include setForTabletUp {
+    @include setXPadding(39px);
+
+    width: 768px;
+  }
+
+  @include setForDesktopUp {
     @include setXPadding(20px);
-  }
 
-  @include setForTabletAndDesktop {
-    max-width: 1600px;
+    width: 1600px;
+  }
+}
+
+.page-header__container {
+  .page-header__backdrop.is-open & {
+    width: 100%;
+    height: 100%;
+
+    background-color: $primary-bgr-color;
+
+    overflow-y: scroll;
+
+    @include setForTabletUp {
+      margin-left: 0;
+
+      width: 429px;
+    }
+  }
+}
+
+.hero__container {
+  @include setForTabletUp {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
   }
 }

@@ -7,11 +7,13 @@
 }
 
 .pricing__img {
+  @extend %x-margin-centered;
+
   &--online {
     width: 100%;
     max-width: 248px;
 
-    @include setForDesktop {
+    @include setForDesktopUp {
       width: 426px;
       height: 320px;
     }
@@ -21,7 +23,7 @@
     width: 100%;
     max-width: 257px;
 
-    @include setForDesktop {
+    @include setForDesktopUp {
       width: 426px;
       height: 320px;
     }
@@ -31,7 +33,7 @@
     width: 100%;
     max-width: 241px;
 
-    @include setForDesktop {
+    @include setForDesktopUp {
       width: 426px;
       height: 320px;
     }

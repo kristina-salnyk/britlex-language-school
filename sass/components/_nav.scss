@@ -1,9 +1,40 @@
-.nav {
+.nav__top-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   padding-top: 36px;
   padding-bottom: 29px;
 
-  display: flex;
-  justify-content: space-between;
+  .page-header__backdrop.is-open & {
+    border-bottom: 1px solid getBorderColor('footer');
+  }
+
+  @include setForMobileExtendedUp {
+    @include setYPadding(45px);
+  }
+
+  @include setForTabletUp {
+    @include setYPadding(40px);
+  }
+
+  @include setForDesktopUp {
+    @include setYPadding(55px);
+  }
+}
+
+.nav__wrap {
+  display: none;
+
+  @include setYPadding(48px);
+
+  .page-header__backdrop.is-open & {
+    display: block;
+  }
+
+  @include setForMobileExtendedUp {
+    @include setYPadding(35px);
+  }
 }
 
 .nav__menu-btn {
@@ -20,12 +51,22 @@
 }
 
 .nav__menu-icon {
-  width: 33px;
+  width: 34px;
   height: 19px;
+
+  @include setForMobileExtendedUp {
+    width: 39px;
+    height: 22px;
+  }
 
   .nav__menu-btn.is-open & {
     width: 34px;
     height: 34px;
+
+    @include setForMobileExtendedUp {
+      width: 39px;
+      height: 39px;
+    }
   }
 }
 
@@ -45,29 +86,4 @@
       display: none;
     }
   }
-}
-
-.nav__menu-container {
-  display: none;
-
-  @include setXPadding(15px);
-
-  position: absolute;
-  top: 100%;
-  left: 0;
-
-  width: 100%;
-  height: 100vh;
-
-  background-color: $primary-bgr-color;
-
-  overflow-y: scroll;
-
-  &.is-open {
-    display: block;
-  }
-}
-
-.nav__menu-wrap {
-  border-top: 1px solid getBorderColor('footer');
 }

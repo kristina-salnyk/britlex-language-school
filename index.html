@@ -14,24 +14,28 @@
 
   <body>
     <header class="page-header">
-      <div class="container page-header__container">
-        <nav class="nav">
-          <a class="logo" href="./index.html">Brit<span class="logo__text">lex</span></a>
+      <div class="page-header__backdrop" data-menu>
+        <div class="container page-header__container">
+          <nav id="nav" class="nav">
+            <div class="nav__top-panel">
+              <a class="logo" href="./index.html">Brit<span class="logo__text">lex</span></a>
+              <button
+                class="nav__menu-btn"
+                aria-expanded="false"
+                aria-controls="nav"
+                data-menu-button
+              >
+                <svg class="nav__menu-icon" aria-label="Mobile menu">
+                  <use
+                    class="nav__icon nav__icon--open"
+                    href="./images/icons.svg#burger-menu"
+                  ></use>
+                  <use class="nav__icon nav__icon--close" href="./images/icons.svg#close"></use>
+                </svg>
+              </button>
+            </div>
 
-          <button
-            class="nav__menu-btn"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-            data-menu-button
-          >
-            <svg class="nav__menu-icon" aria-label="Open mobile menu">
-              <use class="nav__icon nav__icon--open" href="./images/icons.svg#burger-menu"></use>
-              <use class="nav__icon nav__icon--close" href="./images/icons.svg#close"></use>
-            </svg>
-          </button>
-
-          <div class="nav__menu-container" data-menu>
-            <div class="nav__menu-wrap">
+            <div class="nav__wrap">
               <ul class="pages nav__pages">
                 <li class="pages__item"><a class="pages__link" href="#" data-menu-link>Home</a></li>
                 <li class="pages__item">
@@ -48,10 +52,10 @@
                 </li>
               </ul>
 
-              <button class="btn btn--white page-header__btn" type="button">Let’s Talk</button>
+              <button class="btn btn--white nav__btn" type="button">Let’s Talk</button>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -61,15 +65,17 @@
           <svg class="hero__img" viewBox="0 0 654 510">
             <use href="./images/icons.svg#learning-languages"></use>
           </svg>
-          <h1 class="hero__title">Learn Any Foreign Language</h1>
-          <svg class="hero__icon" width="85" height="85">
-            <use href="./images/icons.svg#bulb-icon"></use>
-          </svg>
-          <p class="hero__descr">
-            With our teachers who write a program for each student, you will be able to make your
-            first sketch after the first lesson.
-          </p>
-          <button class="btn btn--black hero__btn" type="button">Get started</button>
+          <div class="hero__content">
+            <h1 class="hero__title">Learn<br />Any Foreign Language</h1>
+            <svg class="hero__icon--bulb" width="85" height="85">
+              <use href="./images/icons.svg#bulb-icon"></use>
+            </svg>
+            <p class="hero__descr">
+              With our teachers who write a program for each student, you will be able to make your
+              first sketch after the first lesson.
+            </p>
+            <button class="btn btn--black hero__btn" type="button">Get started</button>
+          </div>
         </div>
       </section>
 
@@ -238,6 +244,12 @@
       </div>
     </footer>
 
+    <a class="scroll-up" href="#">
+      <svg class="scroll-up__icon">
+        <use href="./images/icons.svg#icon-up"></use>
+      </svg>
+    </a>
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/scroll-up.js"></script>
   </body>
 </html>

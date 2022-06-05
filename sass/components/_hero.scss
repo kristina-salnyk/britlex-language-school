@@ -1,26 +1,63 @@
+.hero {
+  @include setForTabletUp {
+    padding-top: 28px;
+  }
+}
+
 .hero__img {
   width: 100%;
   max-width: calc(767px - (24px * 2));
 
-  @include setForDesktop {
-    width: 654px;
-    height: 510px;
+  @include setForTabletUp {
+    min-width: 352px;
+    min-height: 352px;
+  }
+
+  @include setForDesktopUp {
+    min-width: 654px;
+    min-height: 510px;
+  }
+}
+
+.hero__content {
+  position: relative;
+
+  @include setForMobileOnly {
+    padding-top: 16px;
+  }
+
+  @include setForTabletUp {
+    margin-right: 22px;
   }
 }
 
 .hero__title {
-  margin-top: 16px;
-
   font-weight: 600;
   font-size: 24px;
-  text-align: center;
 
   color: getTextColor('black');
+
+  @include setForMobileOnly {
+    text-align: center;
+  }
+
+  @include setForTabletUp {
+    width: 224px;
+
+    font-size: 36px;
+    line-height: 1.25;
+  }
 }
 
 .hero__icon {
-  @include setForMobile {
-    display: none;
+  &--bulb {
+    position: absolute;
+    right: 0;
+    top: 58px;
+
+    @include setForMobileOnly {
+      display: none;
+    }
   }
 }
 
@@ -28,5 +65,14 @@
   margin-top: 20px;
 
   font-size: 14px;
-  text-align: center;
+
+  @include setForMobileOnly {
+    text-align: center;
+  }
+
+  @include setForTabletUp {
+    margin-top: 25px;
+
+    font-size: 16px;
+  }
 }

@@ -28,7 +28,7 @@
   @include setForTabletUp {
     padding: 31px 17px 37px;
 
-    grid-row: 1 / span 4;
+    grid-row: 1 / 4;
     grid-column: 1;
   }
 }
@@ -37,7 +37,7 @@
   @include setForTabletUp {
     padding: 14px 17px 27px;
 
-    grid-row: 1 / span 2;
+    grid-row: 1 / 3;
     grid-column: 2;
   }
 }
@@ -46,7 +46,7 @@
   @include setForTabletUp {
     padding: 14px 17px 27px;
 
-    grid-row: 1 / span 2;
+    grid-row: 1 / 3;
     grid-column: 3;
   }
 }
@@ -58,8 +58,8 @@
 
     padding: 0px 17px 26px;
 
-    grid-row: 3 / span 4;
-    grid-column: 2 / span 3;
+    grid-row: 3 / 5;
+    grid-column: 2 / 4;
   }
 }
 
@@ -130,19 +130,19 @@
 
   .skills__item:nth-child(2) & {
     @include setForTabletUp {
-      margin-top: -25px;
+      margin-top: -40px;
     }
   }
 
   .skills__item:nth-child(3) & {
     @include setForTabletUp {
-      margin-top: -25px;
+      margin-top: -40px;
     }
   }
 
   .skills__item:nth-child(4) & {
     @include setForTabletUp {
-      margin-top: -5px;
+      margin-top: -10px;
     }
   }
 }

@@ -9,6 +9,15 @@
   padding-bottom: 48px;
 
   border-top: 1px solid getBorderColor('footer');
+
+  @include setForTabletUp {
+    padding-top: 18px;
+    padding-bottom: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .page-footer__list {
@@ -23,4 +32,10 @@
   line-height: 1.45;
 
   color: getTextColor('primary');
+
+  @include setForTabletUp {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.54;
+  }
 }

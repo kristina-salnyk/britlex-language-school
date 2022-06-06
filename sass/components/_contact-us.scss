@@ -1,6 +1,22 @@
+.contact-us__content {
+  @include setForTabletUp {
+    padding-top: 40px;
+    margin-left: 38px;
+  }
+}
+
 .contact-us__img {
-  width: 100%;
-  max-width: calc(767px - (24px * 2));
+  @include setForMobileOnly {
+    width: 100%;
+    max-width: calc(767px - (24px * 2));
+  }
+
+  @include setForTabletUp {
+    width: 100%;
+
+    max-width: 233px;
+    max-height: 210px;
+  }
 
   @include setForDesktopUp {
     width: 425px;
@@ -12,19 +28,34 @@
   margin-top: 38px;
 
   font-size: 14px;
-  text-align: center;
+
+  @include setForMobileOnly {
+    text-align: center;
+  }
 }
 
 .contact-us__subscribe {
   margin-top: 31px;
+
+  @include setForTabletUp {
+    display: flex;
+
+    margin-top: 26px;
+  }
 }
 
 .contact-us__input {
   padding: 16px 26px;
   font-size: 12px;
 
-  width: 100%;
-
   border: 1px solid getBorderColor('input');
   border-radius: 5px;
+
+  @include setForMobileOnly {
+    width: 100%;
+  }
+
+  @include setForTabletUp {
+    width: 283px;
+  }
 }

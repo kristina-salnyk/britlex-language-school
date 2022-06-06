@@ -9,4 +9,25 @@
   font-size: 24px;
   line-height: 3.33;
   text-align: center;
+
+  @include setForTabletUp {
+    font-size: 30px;
+    line-height: 2.67;
+  }
+
+  &--about-us {
+    @include setForTabletUp {
+      position: absolute;
+      top: 0;
+      left: 39px;
+    }
+  }
+
+  &--contact-us {
+    @include setForTabletUp {
+      position: absolute;
+      top: 0;
+      left: 310px;
+    }
+  }
 }

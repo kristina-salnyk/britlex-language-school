@@ -1,11 +1,19 @@
-.about-us__item:not(:first-child) {
-  margin-top: 30px;
+.about-us__content {
+  @include setForTabletUp {
+    padding-top: 65px;
+    margin-right: 70px;
+  }
 }
 
 .about-us__img {
   &--business-competition-bro {
     width: 100%;
     max-width: calc(767px - (24px * 2));
+
+    @include setForTabletUp {
+      min-width: 295px;
+      min-height: 295px;
+    }
 
     @include setForDesktopUp {
       width: 540px;
@@ -14,16 +22,30 @@
   }
 }
 
-.about-us__content {
+.about-us__descr {
   margin-top: 23px;
 
   font-size: 13px;
   line-height: 1.54;
-  text-align: center;
+
+  @include setForMobileOnly {
+    text-align: center;
+  }
 }
 
 .about-us__list {
   margin-top: 24px;
+
+  @include setForTabletUp {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.about-us__item:not(:first-child) {
+  @include setForMobileOnly {
+    margin-top: 30px;
+  }
 }
 
 .about-us__title {
@@ -34,7 +56,7 @@
   color: getTextColor('number');
 }
 
-.about-us__descr {
+.about-us__label {
   font-size: 15px;
   line-height: 1.47;
   text-align: center;

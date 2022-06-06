@@ -65,14 +65,40 @@
   font-size: 14px;
 
   max-width: 178px;
+
+  @include setForTabletUp {
+    font-size: 16px;
+  }
+
+  .skills__item:nth-child(2) &,
+  .skills__item:nth-child(3) & {
+    @include setForTabletUp {
+      margin-top: 13px;
+    }
+  }
+
+  .skills__item:nth-child(4) & {
+    @include setForTabletUp {
+      margin-top: 6px;
+    }
+  }
 }
 
 .contact-us__btn {
   @include setYPadding(20px);
-  margin-top: 17px;
 
   font-weight: 500;
   font-size: 14px;
+
+  @include setForMobileOnly {
+    margin-top: 17px;
+  }
+
+  @include setForTabletUp {
+    margin-left: 6px;
+
+    width: 145px;
+  }
 }
 
 .pricing__btn {
@@ -86,16 +112,22 @@
 
   max-width: 178px;
 
-  font-size: 18px;
+  font-size: 22px;
 
   color: getTextColor('secondary');
 
   background: $label-bgr-color;
+
+  @include setForTabletUp {
+    margin-top: 23px;
+
+    max-width: 205px;
+  }
 }
 
 .btn__text {
   &--pricing {
-    font-size: 14px;
+    font-size: 16px;
 
     color: getTextColor('label');
   }

@@ -16,6 +16,12 @@
   }
 }
 
+@mixin setForMobileExtendedOnly {
+  @media (min-width: 575px) and (max-width: 767px) {
+    @content;
+  }
+}
+
 @mixin setForTabletOnly {
   @media screen and (min-width: 768px) and (max-width: 1599px) {
     @content;
@@ -28,8 +34,14 @@
   }
 }
 
+@mixin setForTabletDown {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
 @mixin setForDesktopUp {
-  @media screen and (min-width: 1600) {
+  @media screen and (min-width: 1600px) {
     @content;
   }
 }

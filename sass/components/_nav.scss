@@ -1,3 +1,9 @@
+.nav {
+  @include setForDesktopUp {
+    display: flex;
+  }
+}
+
 .nav__top-panel {
   display: flex;
   justify-content: space-between;
@@ -19,7 +25,8 @@
   }
 
   @include setForDesktopUp {
-    @include setYPadding(55px);
+    @include setYPadding(63px);
+    margin-right: 228px;
   }
 }
 
@@ -35,6 +42,14 @@
   @include setForMobileExtendedUp {
     @include setYPadding(35px);
   }
+
+  @include setForDesktopUp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+  }
 }
 
 .nav__menu-btn {
@@ -48,6 +63,10 @@
 
   border: none;
   background-color: transparent;
+
+  @include setForDesktopUp {
+    display: none;
+  }
 }
 
 .nav__menu-icon {

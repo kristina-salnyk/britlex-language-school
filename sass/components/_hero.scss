@@ -1,12 +1,15 @@
 .hero {
-  @include setForTabletUp {
+  @include setForTabletOnly {
     padding-top: 28px;
   }
 }
 
 .hero__img {
   width: 100%;
-  max-width: calc(767px - (24px * 2));
+
+  @include setForMobileOnly {
+    max-width: calc(767px - (24px * 2));
+  }
 
   @include setForTabletUp {
     min-width: 352px;
@@ -29,6 +32,10 @@
   @include setForTabletUp {
     margin-right: 22px;
   }
+
+  @include setForDesktopUp {
+    margin-right: 144px;
+  }
 }
 
 .hero__title {
@@ -47,6 +54,12 @@
     font-size: 36px;
     line-height: 1.25;
   }
+
+  @include setForDesktopUp {
+    width: 400px;
+
+    font-size: 64px;
+  }
 }
 
 .hero__icon {
@@ -57,6 +70,12 @@
 
     @include setForMobileOnly {
       display: none;
+    }
+
+    @include setForDesktopUp {
+      top: 100px;
+
+      width: 130px;
     }
   }
 }
@@ -74,5 +93,11 @@
     margin-top: 25px;
 
     font-size: 16px;
+  }
+
+  @include setForDesktopUp {
+    margin-top: 40px;
+
+    font-size: 24px;
   }
 }

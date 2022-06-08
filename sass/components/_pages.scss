@@ -9,8 +9,21 @@
     font-size: 24px;
     line-height: 2.71;
   }
+
+  @include setForDesktopUp {
+    display: flex;
+
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }
 
 .pages__link {
   color: getTextColor('secondary');
+}
+
+.pages__item:not(:first-child) {
+  @include setForDesktopUp {
+    margin-left: 50px;
+  }
 }

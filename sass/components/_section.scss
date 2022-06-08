@@ -1,5 +1,9 @@
 .section {
   padding-bottom: 53px;
+
+  @include setForDesktopUp {
+    padding-bottom: 180px;
+  }
 }
 
 .section__title {
@@ -13,6 +17,13 @@
   @include setForTabletUp {
     font-size: 30px;
     line-height: 2.67;
+  }
+
+  @include setForDesktopUp {
+    margin-bottom: 60px;
+
+    font-size: 48px;
+    line-height: 1.5;
   }
 
   &--about-us {

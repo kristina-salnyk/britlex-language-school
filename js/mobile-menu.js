@@ -11,6 +11,7 @@
   });
 
   function toggleMenu() {
+    if (document.documentElement.clientWidth >= 1600) return;
     const expanded = menuRefs.menuBtn.getAttribute('aria-expanded') === 'true' || false;
     menuRefs.menuBtn.setAttribute('aria-expanded', !expanded);
 

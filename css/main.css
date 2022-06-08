@@ -937,6 +937,7 @@ svg {
 @media screen and (min-width: 1600px) {
   .skills__list {
     grid-gap: 30px;
+    grid-template-rows: 276px 276px 340px;
   }
 }
 
@@ -1090,8 +1091,8 @@ svg {
 }
 @media screen and (min-width: 1600px) {
   .skills__img--podcast-audience-bro {
-    width: 408px;
-    height: 274px;
+    min-width: 408px;
+    max-height: 235px;
   }
 }
 
@@ -1137,7 +1138,7 @@ svg {
     line-height: 4;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1599px) {
   .skills__item:nth-child(4) .skills__title {
     margin-bottom: -10px;
   }

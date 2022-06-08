@@ -8,6 +8,7 @@
 
   @include setForDesktopUp {
     grid-gap: 30px;
+    grid-template-rows: 276px 276px 340px;
   }
 }
 
@@ -147,8 +148,8 @@
     }
 
     @include setForDesktopUp {
-      width: 408px;
-      height: 274px;
+      min-width: 408px;
+      max-height: 235px;
     }
   }
 }
@@ -200,7 +201,7 @@
   }
 
   .skills__item:nth-child(4) & {
-    @include setForTabletUp {
+    @include setForTabletOnly {
       margin-bottom: -10px;
     }
   }

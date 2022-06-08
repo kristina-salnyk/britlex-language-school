@@ -3,7 +3,10 @@
 
   &--online {
     width: 100%;
-    max-width: 248px;
+
+    @include setForMobileOnly {
+      max-width: 248px;
+    }
 
     @include setForTabletUp {
       width: 192px;
@@ -18,7 +21,10 @@
 
   &--lesson {
     width: 100%;
-    max-width: 257px;
+
+    @include setForMobileOnly {
+      max-width: 257px;
+    }
 
     @include setForTabletUp {
       width: 219px;
@@ -33,7 +39,10 @@
 
   &--webinar {
     width: 100%;
-    max-width: 241px;
+
+    @include setForMobileOnly {
+      max-width: 241px;
+    }
 
     @include setForTabletUp {
       width: 210px;
@@ -57,10 +66,10 @@
   }
 
   @include setForTabletUp {
-    &:not(:first-child) {
-      margin-left: 30px;
-    }
+    width: calc((100% - 2 * 30px) / 3);
+  }
 
+  @include setForTabletOnly {
     &:first-child {
       padding-top: 18px;
     }
@@ -93,6 +102,13 @@
     font-size: 20px;
     line-height: 1.4;
   }
+
+  @include setForDesktopUp {
+    margin-top: 50px;
+
+    font-size: 30px;
+    line-height: 1.6;
+  }
 }
 
 .pricing__descr {
@@ -108,5 +124,11 @@
 
     font-size: 14px;
     line-height: 1.5;
+  }
+
+  @include setForDesktopUp {
+    margin-top: 20px;
+
+    font-size: 20px;
   }
 }

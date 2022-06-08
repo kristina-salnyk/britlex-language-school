@@ -125,11 +125,19 @@
 
     width: 145px;
   }
+
+  @include setForDesktopUp {
+    margin-left: 30px;
+
+    width: 312px;
+
+    font-size: 20px;
+  }
 }
 
 .pricing__btn {
   @include setYPadding(14px);
-  @extend %x-margin-centered;
+
   margin-top: 33px;
 
   display: flex;
@@ -149,6 +157,19 @@
 
     max-width: 205px;
   }
+
+  @include setForTabletDown {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include setForDesktopUp {
+    margin-top: 30px;
+
+    max-width: 260px;
+
+    font-size: 24px;
+  }
 }
 
 .btn__text {
@@ -156,5 +177,9 @@
     font-size: 16px;
 
     color: getTextColor('label');
+
+    @include setForDesktopUp {
+      font-size: 18px;
+    }
   }
 }

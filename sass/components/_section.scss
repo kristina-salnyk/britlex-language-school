@@ -40,5 +40,9 @@
       top: 0;
       left: 310px;
     }
+
+    @include setForDesktopUp {
+      left: 594px;
+    }
   }
 }

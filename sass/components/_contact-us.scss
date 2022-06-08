@@ -1,36 +1,49 @@
+.contact-us {
+  padding-bottom: 55px;
+}
+
 .contact-us__content {
-  @include setForTabletUp {
+  @include setForTabletOnly {
     padding-top: 40px;
     margin-left: 38px;
+  }
+
+  @include setForDesktopUp {
+    margin-left: 144px;
   }
 }
 
 .contact-us__img {
+  width: 100%;
+
   @include setForMobileOnly {
-    width: 100%;
     max-width: calc(767px - (24px * 2));
   }
 
-  @include setForTabletUp {
-    width: 100%;
-
-    max-width: 233px;
-    max-height: 210px;
+  @include setForTabletOnly {
+    min-width: 233px;
+    min-height: 210px;
   }
 
   @include setForDesktopUp {
-    width: 425px;
-    height: 430px;
+    max-width: 425px;
+    max-height: 430px;
   }
 }
 
 .contact-us__descr {
-  margin-top: 38px;
-
   font-size: 14px;
 
   @include setForMobileOnly {
     text-align: center;
+  }
+
+  @include setForDesktopDown {
+    margin-top: 38px;
+  }
+
+  @include setForDesktopUp {
+    font-size: 20px;
   }
 }
 
@@ -41,6 +54,10 @@
     display: flex;
 
     margin-top: 26px;
+  }
+
+  @include setForDesktopUp {
+    margin-top: 30px;
   }
 }
 
@@ -57,5 +74,12 @@
 
   @include setForTabletUp {
     width: 283px;
+  }
+
+  @include setForDesktopUp {
+    font-size: 16px;
+    line-height: 1.88;
+
+    width: 425px;
   }
 }

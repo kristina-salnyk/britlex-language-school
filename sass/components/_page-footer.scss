@@ -18,6 +18,11 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  @include setForDesktopUp {
+    padding-top: 22px;
+    padding-bottom: 77px;
+  }
 }
 
 .page-footer__list {
@@ -37,5 +42,22 @@
     font-weight: 400;
     font-size: 13px;
     line-height: 1.54;
+  }
+
+  @include setForDesktopUp {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+}
+
+.page-footer__item:not(:first-child) {
+  @include setForDesktopUp {
+    margin-left: 80px;
+  }
+}
+
+.page-footer__separator {
+  @include setForDesktopUp {
+    display: none;
   }
 }

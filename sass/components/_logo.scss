@@ -12,6 +12,11 @@
   @include setForDesktopUp {
     font-size: 36px;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .logo__text {

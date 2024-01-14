@@ -16,6 +16,7 @@
     menuRefs.menuBtn.setAttribute('aria-expanded', !expanded);
 
     menuRefs.menuBtn.classList.toggle('is-open');
+    menuRefs.menuBtn.blur();
     menuRefs.menu.classList.toggle('is-open');
     document.body.classList.toggle('modal-is-open');
   }

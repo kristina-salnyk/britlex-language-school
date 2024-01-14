@@ -3,6 +3,13 @@
 
   border: none;
   border-radius: 5px;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .btn--black {

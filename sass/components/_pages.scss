@@ -20,6 +20,11 @@
 
 .pages__link {
   color: getTextColor('secondary');
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .pages__item:not(:first-child) {

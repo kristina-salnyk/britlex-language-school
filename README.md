@@ -1,4 +1,4 @@
-# Britlex Language School Landing Page
+# Britlex Language School
 
 This project is carefully crafted landing page of Britlex, a digital gateway designed to ignite a world of linguistic
 excellence. The web page is visually captivating with a harmonious blend of colors, typography, and imagery that evokes
